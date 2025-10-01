@@ -1,0 +1,10 @@
+services:
+  jupyter:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./work:/home/jovyan/work
+    environment:
+      - JUPYTER_TOKEN=mytoken
+    container_name: jupyter-notebook
